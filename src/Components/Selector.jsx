@@ -11,7 +11,7 @@ import outputBodyState from '../Atoms/outputBodyAtom';
 const Selector = () => {
 
     const [selected, setSelected] = useState('Python Flask')
-    const [inputBody] = useRecoilValue(inputBodyState);
+    const [inputBody, setInputBody] = useRecoilState(inputBodyState);
     const [outputBody, setOutputBody] = useRecoilState(outputBodyState);
     const generateRef = React.useRef(null);
 
