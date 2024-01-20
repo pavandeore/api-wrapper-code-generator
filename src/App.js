@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Components/Header";
+import InputBox from "./Components/InputBox";
+import OutputBox from "./Components/OutputBox";
+import Selector from "./Components/Selector";
 
-function App() {
+import {
+  RecoilRoot
+} from 'recoil';
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <RecoilRoot>
+    <div className="max-w-4xl mx-auto mt-5">
+      <Header />
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-5 gap-x-5">
+        <InputBox />
+        <OutputBox />
+      </div>
+      <Selector />
     </div>
+    </RecoilRoot>
   );
-}
+};
 
 export default App;
