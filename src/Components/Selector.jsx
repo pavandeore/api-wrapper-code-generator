@@ -27,7 +27,8 @@ const Selector = () => {
             "text": inputBody
         }
 
-        fetch('http://localhost:7000/text', {
+        // fetch('http://localhost:7000/text', {
+        fetch('https://distinct-cape-jay.cyclic.app/text', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
